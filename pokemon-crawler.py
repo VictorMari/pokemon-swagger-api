@@ -15,7 +15,7 @@ def crawl_index(index):
             req = requests.get(**req_data)
             req.raise_for_status()
             if req.status_code == 200:
-                return [req.json()]
+                yield req.json()
         except Exception as e:
             print(e)
             print("Cound not get resource", resource["name"], "at url:", resource["url"])
@@ -37,7 +37,7 @@ def main():
     for index, collection_name in get_indexes():
         print("processing collection", collection_name)
         for resource in crawl_index(index):
-            print("element id", resource["id"])
+            #print("element id", resource["id"])
             save_resource(resource, collection_name)
 
 
