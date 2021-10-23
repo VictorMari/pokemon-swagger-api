@@ -1,0 +1,381 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "base_happiness": {
+      "type": "integer"
+    },
+    "capture_rate": {
+      "type": "integer"
+    },
+    "color": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "url"
+      ]
+    },
+    "egg_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "url"
+        ]
+      }
+    },
+    "evolution_chain": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ]
+    },
+    "evolves_from_species": {
+      "type": "null"
+    },
+    "flavor_text_entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "flavor_text": {
+            "type": "string"
+          },
+          "language": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          },
+          "version": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          }
+        },
+        "required": [
+          "flavor_text",
+          "language",
+          "version"
+        ]
+      }
+    },
+    "form_descriptions": {
+      "type": "array"
+    },
+    "forms_switchable": {
+      "type": "boolean"
+    },
+    "gender_rate": {
+      "type": "integer"
+    },
+    "genera": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "genus": {
+            "type": "string"
+          },
+          "language": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          }
+        },
+        "required": [
+          "genus",
+          "language"
+        ]
+      }
+    },
+    "generation": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "url"
+      ]
+    },
+    "growth_rate": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "url"
+      ]
+    },
+    "habitat": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "url"
+      ]
+    },
+    "has_gender_differences": {
+      "type": "boolean"
+    },
+    "hatch_counter": {
+      "type": "integer"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "is_baby": {
+      "type": "boolean"
+    },
+    "is_legendary": {
+      "type": "boolean"
+    },
+    "is_mythical": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    },
+    "names": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "language",
+          "name"
+        ]
+      }
+    },
+    "order": {
+      "type": "integer"
+    },
+    "pal_park_encounters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "area": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          },
+          "base_score": {
+            "type": "integer"
+          },
+          "rate": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "area",
+          "base_score",
+          "rate"
+        ]
+      }
+    },
+    "pokedex_numbers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "entry_number": {
+            "type": "integer"
+          },
+          "pokedex": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          }
+        },
+        "required": [
+          "entry_number",
+          "pokedex"
+        ]
+      }
+    },
+    "shape": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "url"
+      ]
+    },
+    "varieties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "is_default": {
+            "type": "boolean"
+          },
+          "pokemon": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          }
+        },
+        "required": [
+          "is_default",
+          "pokemon"
+        ]
+      }
+    }
+  },
+  "required": [
+    "base_happiness",
+    "capture_rate",
+    "color",
+    "egg_groups",
+    "evolution_chain",
+    "evolves_from_species",
+    "flavor_text_entries",
+    "form_descriptions",
+    "forms_switchable",
+    "gender_rate",
+    "genera",
+    "generation",
+    "growth_rate",
+    "habitat",
+    "has_gender_differences",
+    "hatch_counter",
+    "id",
+    "is_baby",
+    "is_legendary",
+    "is_mythical",
+    "name",
+    "names",
+    "order",
+    "pal_park_encounters",
+    "pokedex_numbers",
+    "shape",
+    "varieties"
+  ]
+}

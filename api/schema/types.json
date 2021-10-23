@@ -1,0 +1,256 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "damage_relations": {
+      "type": "object",
+      "properties": {
+        "double_damage_from": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          }
+        },
+        "double_damage_to": {
+          "type": "array"
+        },
+        "half_damage_from": {
+          "type": "array"
+        },
+        "half_damage_to": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          }
+        },
+        "no_damage_from": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          }
+        },
+        "no_damage_to": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          }
+        }
+      },
+      "required": [
+        "double_damage_from",
+        "double_damage_to",
+        "half_damage_from",
+        "half_damage_to",
+        "no_damage_from",
+        "no_damage_to"
+      ]
+    },
+    "game_indices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "game_index": {
+            "type": "integer"
+          },
+          "generation": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          }
+        },
+        "required": [
+          "game_index",
+          "generation"
+        ]
+      }
+    },
+    "generation": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "url"
+      ]
+    },
+    "id": {
+      "type": "integer"
+    },
+    "move_damage_class": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "url"
+      ]
+    },
+    "moves": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "url"
+        ]
+      }
+    },
+    "name": {
+      "type": "string"
+    },
+    "names": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "language",
+          "name"
+        ]
+      }
+    },
+    "past_damage_relations": {
+      "type": "array"
+    },
+    "pokemon": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "pokemon": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          },
+          "slot": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "pokemon",
+          "slot"
+        ]
+      }
+    }
+  },
+  "required": [
+    "damage_relations",
+    "game_indices",
+    "generation",
+    "id",
+    "move_damage_class",
+    "moves",
+    "name",
+    "names",
+    "past_damage_relations",
+    "pokemon"
+  ]
+}

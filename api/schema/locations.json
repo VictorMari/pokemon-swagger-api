@@ -1,0 +1,226 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "encounter_method_rates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "encounter_method": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          },
+          "version_details": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rate": {
+                  "type": "integer"
+                },
+                "version": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "url"
+                  ]
+                }
+              },
+              "required": [
+                "rate",
+                "version"
+              ]
+            }
+          }
+        },
+        "required": [
+          "encounter_method",
+          "version_details"
+        ]
+      }
+    },
+    "game_index": {
+      "type": "integer"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "url"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "names": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "language",
+          "name"
+        ]
+      }
+    },
+    "pokemon_encounters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "pokemon": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          },
+          "version_details": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "encounter_details": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "chance": {
+                        "type": "integer"
+                      },
+                      "condition_values": {
+                        "type": "array"
+                      },
+                      "max_level": {
+                        "type": "integer"
+                      },
+                      "method": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "url": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "url"
+                        ]
+                      },
+                      "min_level": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "chance",
+                      "condition_values",
+                      "max_level",
+                      "method",
+                      "min_level"
+                    ]
+                  }
+                },
+                "max_chance": {
+                  "type": "integer"
+                },
+                "version": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "url"
+                  ]
+                }
+              },
+              "required": [
+                "encounter_details",
+                "max_chance",
+                "version"
+              ]
+            }
+          }
+        },
+        "required": [
+          "pokemon",
+          "version_details"
+        ]
+      }
+    }
+  },
+  "required": [
+    "encounter_method_rates",
+    "game_index",
+    "id",
+    "location",
+    "name",
+    "names",
+    "pokemon_encounters"
+  ]
+}

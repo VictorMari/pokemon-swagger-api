@@ -1,0 +1,89 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "descriptions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "url"
+                        ]
+                    }
+                },
+                "required": [
+                    "description",
+                    "language"
+                ]
+            }
+        },
+        "formula": {
+            "type": "string"
+        },
+        "id": {
+            "type": "integer"
+        },
+        "levels": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "experience": {
+                        "type": "integer"
+                    },
+                    "level": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "experience",
+                    "level"
+                ]
+            }
+        },
+        "name": {
+            "type": "string"
+        },
+        "pokemon_species": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "url": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "url"
+                ]
+            }
+        }
+    },
+    "required": [
+        "descriptions",
+        "formula",
+        "id",
+        "levels",
+        "name",
+        "pokemon_species"
+    ]
+}

@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "affecting_natures": {
+      "type": "object",
+      "properties": {
+        "decrease": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "max_change": {
+                "type": "integer"
+              },
+              "nature": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "url"
+                ]
+              }
+            },
+            "required": [
+              "max_change",
+              "nature"
+            ]
+          }
+        },
+        "increase": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "max_change": {
+                "type": "integer"
+              },
+              "nature": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "url"
+                ]
+              }
+            },
+            "required": [
+              "max_change",
+              "nature"
+            ]
+          }
+        }
+      },
+      "required": [
+        "decrease",
+        "increase"
+      ]
+    },
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "names": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "language",
+          "name"
+        ]
+      }
+    }
+  },
+  "required": [
+    "affecting_natures",
+    "id",
+    "name",
+    "names"
+  ]
+}

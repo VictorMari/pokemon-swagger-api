@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "affecting_moves": {
+      "type": "object",
+      "properties": {
+        "decrease": {
+          "type": "array"
+        },
+        "increase": {
+          "type": "array"
+        }
+      },
+      "required": [
+        "decrease",
+        "increase"
+      ]
+    },
+    "affecting_natures": {
+      "type": "object",
+      "properties": {
+        "decrease": {
+          "type": "array"
+        },
+        "increase": {
+          "type": "array"
+        }
+      },
+      "required": [
+        "decrease",
+        "increase"
+      ]
+    },
+    "characteristics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      }
+    },
+    "game_index": {
+      "type": "integer"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "is_battle_only": {
+      "type": "boolean"
+    },
+    "move_damage_class": {
+      "type": "null"
+    },
+    "name": {
+      "type": "string"
+    },
+    "names": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ]
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "language",
+          "name"
+        ]
+      }
+    }
+  },
+  "required": [
+    "affecting_moves",
+    "affecting_natures",
+    "characteristics",
+    "game_index",
+    "id",
+    "is_battle_only",
+    "move_damage_class",
+    "name",
+    "names"
+  ]
+}
